@@ -9,10 +9,10 @@ No more !!
 
 ### Dev dependencies
 
--prettier (formating the text)
--react-context-devtool (debug context)
--@testing-library (jest-dom,react,user-event)
--react-scripts
+- prettier (formating the text)
+- react-context-devtool (debug context)
+- @testing-library (jest-dom,react,user-event)
+- react-scripts
 
 ## Features
 
