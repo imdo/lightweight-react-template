@@ -4,14 +4,8 @@ import Home from "./Components/Home";
 import ProtectedRoute from "Shared/ProtectedRoute";
 import ConnectedStore from "Shared/ConnectedStore";
 import { Provider, initialState, UserReducer } from "Shared/UserContext";
-import { BottomNavigation, BottomNavigationAction } from "@material-ui/core";
-import RestoreIcon from "@material-ui/icons/Restore";
-import FavoriteIcon from "@material-ui/icons/Favorite";
-import LocationOnIcon from "@material-ui/icons/LocationOn";
-import { useState } from "react";
 
 function App() {
-  const [value, setValue] = useState(initialState);
   return (
     <Router>
       <div>
@@ -29,17 +23,6 @@ function App() {
           <ProtectedRoute component={About} exact path="/counter" />
           <Route path="/" component={Home} />
         </Switch>
-        <BottomNavigation
-          value={value}
-          onChange={(event, newValue) => {
-            setValue(newValue);
-          }}
-          showLabels
-        >
-          <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
-          <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-          <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
-        </BottomNavigation>
       </div>
     </Router>
   );
